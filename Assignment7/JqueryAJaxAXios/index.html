@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Data using AJAX, jQuery, and Axios</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fetch Data from URL</h1>
+    <button id="ajaxButton">Fetch with AJAX</button>
+    <button id="jqueryButton">Fetch with jQuery</button>
+    <button id="axiosButton">Fetch with Axios</button>
+
+    <table id="dataTable" border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        const url1 = 'https://jsonplaceholder.typicode.com/todos?_limit=25';
+
+        
+        function populateTable(data) {
+            const tableBody = document.querySelector('#dataTable tbody');
+            tableBody.innerHTML = ''; 
+            data.forEach(item => {
+                const row = `
+                    <tr>
+                        <td>${item.id}</td>
+                        <td>${item.title}</td>
+                        <td>${item.completed ? 'Yes' : 'No'}</td>
+                    </tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
+
+        // Fetch with AJAX
+        document.getElementById('ajaxButton').addEventListener('click', () => {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url1, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const data = JSON.parse(xhr.responseText);
+                    populateTable(data);
+                }
+            };
+            xhr.send();
+        });
+
+        // Fetch with jQuery
+        document.getElementById('jqueryButton').addEventListener('click', () => {
+            $.get(url1, (data) => {
+                populateTable(data);
+            });
+        });
+
+        // Fetch with Axios
+        document.getElementById('axiosButton').addEventListener('click', () => {
+            axios.get(url1)
+                .then(response => {
+                    populateTable(response.data);
+                })
+                .catch(error => console.error(error));
+        });
+    </script>
+</body>
+</html>

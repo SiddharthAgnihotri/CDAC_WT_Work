@@ -1,0 +1,32 @@
+[
+    {
+        "empId":1,
+        "ename":"Rajesh",
+        "city":"Pune",
+        "deptId":101
+    },
+    {
+        "empId":2,
+        "ename":"Ganesh",
+        "city":"Mumbai",
+        "deptId":101
+    },
+    {
+        "empId":3,
+        "ename":"Suresh",
+        "city":"Delhi",
+        "deptId":102
+    },
+    {
+        "empId":4,
+        "ename":"Ramesh",
+        "city":"Bhopal",
+        "deptId":102
+    },
+    {
+        "empId":5,
+        "ename":"Kamlesh",
+        "city":"Kolkata",
+        "deptId":102
+    }
+]

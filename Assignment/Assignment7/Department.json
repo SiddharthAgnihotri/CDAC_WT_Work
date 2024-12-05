@@ -1,0 +1,17 @@
+[
+    {
+        "dept_id": 1,
+        "dept_name": "Human Resources",
+        "dept_location": "New York"
+    },
+    {
+        "dept_id": 2,
+        "dept_name": "Finance",
+        "dept_location": "Los Angeles"
+    },
+    {
+        "dept_id": 3,
+        "dept_name": "IT",
+        "dept_location": "Chicago"
+    }
+]

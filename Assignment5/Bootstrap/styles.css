@@ -1,0 +1,122 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.hero{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('dark-modern-office-illuminated-by-electric-lamp-free-photo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar{
+    
+    color: white;
+    padding: 1vw 4vw;
+    display: flex;
+    background-color: rgba(40, 39, 39, 0.4);
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.company-logo{
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.company-logo span{
+    color: red;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+.nav-link li{
+    list-style: none;
+    font-size: 1.1vw;
+    color: rgb(160, 159, 159);
+    cursor: pointer;
+}
+
+.nav-link .active{
+    color: white;
+}
+
+.nav-link button{
+    background-color: orangered;
+    padding: .4vw 2vw;
+    color: white;
+    font-size: .9vw;
+    border-radius: 30px;
+}
+
+.hero-body{
+    height: 90vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2vw;
+}
+
+.hero-body-first{
+    font-size: 2.2vw;
+    letter-spacing: .2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-body-second{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+.card{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1vw;
+    padding:2vw 3vw;
+    border: 1px solid rgb(46, 43, 43);
+    background-color: rgba(40, 39, 39, 0.4);
+    gap: 1vw;
+}
+.hero-body-second img{
+   width: 3vw;
+}
+
+.main{
+    padding: 2vw;
+    display: flex;
+}
+
+.main-first{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.5vw;
+    gap: 1.5vw;
+    flex:1;
+
+}
+
+.main-first p:nth-child(1){
+    font-size: 2vw;
+    letter-spacing: 2px;
+}
+
+.main-first p:nth-child(2){
+    font-size: 1.2vw;
+    letter-spacing: 1px;
+}
+.main-img{
+    flex:1;
+}

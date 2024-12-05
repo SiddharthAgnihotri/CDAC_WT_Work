@@ -1,0 +1,26 @@
+[
+    {
+        "emp_id": 101,
+        "name": "John Doe",
+        "city": "New York",
+        "dept_id": 1
+    },
+    {
+        "emp_id": 102,
+        "name": "Jane Smith",
+        "city": "Los Angeles",
+        "dept_id": 2
+    },
+    {
+        "emp_id": 103,
+        "name": "Emily Johnson",
+        "city": "Chicago",
+        "dept_id": 3
+    },
+    {
+        "emp_id": 104,
+        "name": "Michael Brown",
+        "city": "Houston",
+        "dept_id": 1
+    }
+]

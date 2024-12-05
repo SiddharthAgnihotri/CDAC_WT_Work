@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <p class="emptitle">Employee System</p>
+        <p>Employee Count: <span id="empcount">0</span></p>
+    </div>
+    <div class="emp-entry">
+        <form id="formi">
+            <div class="input-list">
+                <label for="id">ID: </label>
+                <input type="number" placeholder="Enter ID" id="id" required>
+                <p id="id-msg"></p>
+            </div>
+            <div class="input-list">
+                <label for="name">Name: </label>
+                <input type="text" placeholder="Enter your Name" id="name" value="" required>
+            </div>
+            
+            <div class="input-list">
+                <label for="city">City: </label>
+                <input type="text" placeholder="Enter your city" id="city" value="" required>
+            </div>
+
+            <div class="btn-div">
+                <button type="button" onclick='handleSubmit()'>Add Employee</button>
+                <button type="button" onclick='handleDisplay()'>Display Employee</button>
+            </div>
+            <p id="confirm"></p>
+        </form>
+
+        <div id="emp-table">
+            <table border="1">
+                <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th></th>
+                </thead>
+                <tbody id="tb">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+   
+
+    <script>
+        let id;
+        let name;
+        let city;
+        let user=[];
+        let bool=false;
+        document.getElementById('id').addEventListener("change",(e)=>{
+            id=e.target.value;    
+        })
+        document.getElementById('name').addEventListener("change",(e)=>{
+            name=e.target.value;
+        })
+        document.getElementById('city').addEventListener("change",(e)=>{
+            city=e.target.value;
+        })
+
+        const handleSubmit=()=>{
+           
+            document.getElementById('confirm').innerText="";
+            let emp={Id:id,name:name,city:city};
+            user.map(u=>{
+                if(u.Id===id){
+                    bool=true;
+                
+                }      
+            })
+            
+            if(!bool){
+                user=[...user,emp];
+                document.getElementById('confirm').innerText="User added successfully";
+                document.getElementById('id').value="";
+                document.getElementById('name').value="";
+                document.getElementById('city').value="";
+            }else{
+                document.getElementById('id-msg').innerText="Id Already Exist";
+            }
+
+            document.getElementById("empcount").innerHTML=user.length;
+        }
+
+         
+
+            const handleDisplay=()=>{
+                let di=document.getElementById('tb');
+                di.innerHTML="";
+                user.map(u=>{
+                    let t = document.createElement("tr");  
+
+            let idCell = document.createElement("td");  
+            idCell.innerText = u.Id;  
+            t.appendChild(idCell);  
+
+            let nameCell = document.createElement("td");  
+            nameCell.innerText = u.name;  
+            t.appendChild(nameCell); 
+
+            let cityCell=document.createElement("td");
+            cityCell.innerText=u.city;
+            t.appendChild(cityCell);
+
+            let delBtn=document.createElement("button");
+            delBtn.innerHTML="Delete";
+            delBtn.value=u.Id;
+            t.appendChild(delBtn);
+            
+            delBtn.addEventListener("click",(e)=>{
+                let delId=e.target.value;
+                user=user.filter(u=>u.Id!=delId)
+                handleDisplay();
+                document.getElementById("empcount").innerHTML=user.length;
+            })
+
+            console.log(user);
+
+
+
+            di.appendChild(t);  
+                    
+        })
+            }
+           
+            
+        
+    </script>
+</body>
+</html>

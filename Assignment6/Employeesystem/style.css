@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.heading{
+    display: flex;
+    padding: 3vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.emptitle{
+    font-size: 2vw;
+}
+.heading p:nth-child(2){
+    font-size: 1.5vw;
+}
+
+
+.emp-entry{
+padding: 3vw;
+}
+
+.input-list{
+    background-color: aliceblue;
+    display: flex;
+    padding: .5vw;
+    width: 50%;
+    align-items: center;
+   
+
+}
+.input-list label{
+    font-size: 1.2vw;
+    flex: 1;
+    
+}
+
+.input-list input{
+    font-size: 1.2vw;
+    padding: .5vw;
+    flex: 1;
+    
+}
+
+.btn-div button{
+    padding: .6vw;
+    margin: 1vw;
+    font-size: .8vw;
+    background-color: rgb(62, 181, 62);
+    color: white;
+    border-radius: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.btn-div button:hover{
+    background-color: green;
+}
+
+
+#confirm{
+    color: green;
+    font-size: 1vw;
+    margin-bottom: 1vw;
+}
+
+#id-msg{
+    position: absolute;
+    margin-left:48vw;
+    color: red;
+}
+
+#emp-table th{
+    padding: 1.2vw;
+    font-size: 1vw;
+}
+
+#emp-table td{
+    font-size: 1.2vw;
+    text-align: center;
+    padding: 1vw;
+}
+
+#emp-table button{
+    font-size: 1vw;
+    color: white;
+    padding: 1vw;
+    background-color: rgb(204, 31, 31);
+    cursor: pointer;
+}
+#emp-table button:hover{
+    background-color: red;
+    transition: all 1s ease-in-out;
+}
+
+

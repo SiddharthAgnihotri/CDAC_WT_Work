@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+}
+
+.header{
+    width: 100%;
+    padding: 1vw ;
+    text-align: center;
+    line-height: 2.5vw;
+
+}
+
+.header #name{
+    font-size: 3vw;
+}
+.header #role{
+    font-size: 1.3vw;
+}
+.header #contact-detail{
+    font-size: 1.1vw;
+}
+.main{
+    padding: 0vw 1vw;
+}
+
+.heading{
+    font-size: 1.3vw;
+    padding: .5vw 0vw;
+    font-weight: bold;
+}
+
+.summary #summary-description{
+    font-size: 1.1vw;
+    padding: 1vw 0vw;
+}
+.education-desc{
+    padding: 1vw 0vw;
+}
+.education .collage, .degree{
+display: flex;
+font-size: 1.1vw;
+justify-content: space-between;
+padding: .5vw;
+}
+
+.collage{
+    font-weight: bold;
+}
+
+.projects-list{
+    padding: .6vw 0vw;
+}
+
+.project-name{
+font-size: 1.2vw;
+padding: .5vw 0vw;
+}
+.project-name span{
+    font-weight: bold;
+
+}
+
+.project-desc{
+    padding: 0vw 1.5vw;
+    font-size: 1.1vw;
+}
+
+.projects-list .project2{
+    margin-top:1.2vw;
+}
+
+.skill-list{
+    padding: .2vw 1.5vw;
+}
+.skill-list li{
+    list-style: none;
+    font-size: 1.1vw;
+    line-height: 1.5vw;
+}
+
+.skill-list li span{
+    font-weight: bold;
+}
+
+#contactForm{
+    padding: 1vw ;
+}
+
+/* #contactForm label{
+    font-size: 1.2vw;
+    margin-right:1vw;
+} */
+
+
+#contactForm{
+width: 60%;
+display: flex;
+flex-direction: column;
+gap: 1.5vw;
+}
+
+.formField{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contactForm input{
+    font-size: 1.1vw;
+    margin: 1vw 0vw;
+    border-radius: 10px;
+    border:1px solid black;
+    height:3vw;
+    width: 40%;
+    text-align: center;
+}
+
+#contactForm textarea{
+    width: 40%;
+    border-radius: 10px;
+    border:1px solid black;
+    text-align: center;
+}
+
+#contactForm button{
+    width: 20%;
+    align-items: center;
+    background-color: green;
+    height: 2.5vw;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+#contactForm button:hover{
+    background-color: rgb(0, 103, 0);
+}
+

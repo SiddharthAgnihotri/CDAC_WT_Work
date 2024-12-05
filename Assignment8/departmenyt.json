@@ -1,0 +1,10 @@
+[
+    {
+        "deptId":101,
+        "location":"South"
+    },
+    {
+        "deptId":102,
+        "location":"North"
+    }
+]
